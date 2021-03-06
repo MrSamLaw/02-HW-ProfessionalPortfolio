@@ -6,31 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header>
-
+    <header id="home">
+        <div class="welcome">
+            "Hello, I am <span class="highlight">Sam Law</span>." <br />
+            "I'm an aspiring full-stack developer."
+        </div>
+        <a href="#portfolio" class="button">Let's Connect</a>
+        <form>
+            <button formaction="#portfolio">Let's Connect (Formaction)</button>
+        </form>
     </header>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Portfolio</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="portfolio">
+        <section id="portfolio">
             <h2>portfolio</h2>
+            <section class="wrapper">
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+
+            </section>
 
         </section>
 
-        <section class="about">
+        <section id="about">
             <h2>about</h2>
         </section>
-        <section class="contact">
+        <section id="contact">
             <h2>contact me</h2>
         </section>
     </main>
