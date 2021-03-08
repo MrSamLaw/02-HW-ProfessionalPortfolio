@@ -10,103 +10,103 @@
 </head>
 
 <body>
-    <div class="overflow-wrap">
-        <section id="home" class="flex">
-            <div class="flex">
-                <div class="welcome">
-                    "Hello, I am <span class="highlight">Sam Law</span>." <br />
-                    "I'm an aspiring full-stack developer."
-                </div>
-                <form>
-                    <button formaction="#portfolio">Let's Connect</button>
-                </form>
+    <section id="home" class="flex">
+        <div class="flex">
+            <div class="welcome">
+                "Hello, I am <span class="highlight">Sam Law</span>." <br />
+                "I'm an aspiring full-stack developer."
             </div>
+            <form>
+                <button formaction="#portfolio">Let's Connect</button>
+            </form>
+        </div>
+    </section>
+    <nav class="flex collapsible-menu">
+        <input type="checkbox" id="menu">
+        <label for="menu"></label>
+        <ul class="menu-content">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="portfolio">
+            <h2>portfolio</h2>
+            <section class="wrapper">
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img />
+                    <div class="card-content">
+                        <h3>Title</h3>
+                        <p>category</p>
+                    </div>
+                </article>
+            </section>
+
         </section>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
 
-        <main>
-            <section id="portfolio">
-                <h2>portfolio</h2>
-                <section class="wrapper">
-                    <article class="card">
-                        <img />
-                        <div class="card-content">
-                            <h3>Title</h3>
-                            <p>category</p>
-                        </div>
-                    </article>
+        <section id="about">
+            <h2>about</h2>
+        </section>
+        <section id="contact">
+            <h2>contact me</h2>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Samuel L Jackson" required>
+                <label for="email-address">Email Address</label>
+                <input type="email" id="email-address" name="email" placeholder="you@yourdomain.com" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="How can I help?" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
 
-                    <article class="card">
-                        <img />
-                        <div class="card-content">
-                            <h3>Title</h3>
-                            <p>category</p>
-                        </div>
-                    </article>
+    <footer>
 
-                    <article class="card">
-                        <img />
-                        <div class="card-content">
-                            <h3>Title</h3>
-                            <p>category</p>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <img />
-                        <div class="card-content">
-                            <h3>Title</h3>
-                            <p>category</p>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <img />
-                        <div class="card-content">
-                            <h3>Title</h3>
-                            <p>category</p>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <img />
-                        <div class="card-content">
-                            <h3>Title</h3>
-                            <p>category</p>
-                        </div>
-                    </article>
-                </section>
-
-            </section>
-
-            <section id="about">
-                <h2>about</h2>
-            </section>
-            <section id="contact">
-                <h2>contact me</h2>
-                <form>
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Samuel L Jackson" required>
-                    <label for="email-address">Email Address</label>
-                    <input type="email" id="email-address" name="email" placeholder="you@yourdomain.com" required>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="How can I help?" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </section>
-        </main>
-
-        <footer>
-
-        </footer>
-    </div>
+    </footer>
 </body>
 
 </html>
