@@ -57,9 +57,76 @@ body {
     color:var(--color-288redalpha);
 }
 
+.contact-form .social a.email {
+    text-indent: -99999px;
+    display: inline-block;
+    width: 20px; 
+    height:20px;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size:20px 20px;
+    transition:.3s opacity,.3s background-image;
+    opacity:.6;
+    background-image:url(../images/emailoutline-creamred.svg);
+}
+    
+.contact-form .social a.email:hover {
+    opacity:1;
+}
+
+.contact-form .social a.email:hover {
+    background-image:url(../images/emailoutline-488red.svg)
+}
+
+.contact-form .social a.github {
+    text-indent: -99999px;
+    display: inline-block;
+    width: 20px; 
+    height:20px;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size:20px 20px;
+    transition:.3s opacity,.3s background-image;
+    opacity:.6;
+    background-image:url(../images/githuboutline-creamred.svg);
+}
+    
+.contact-form .social a.github:hover {
+    opacity:1;
+}
+
+.contact-form .social a.github:hover {
+    background-image:url(../images/githuboutline-488red.svg)
+}
+
+.contact-form .social a.linkedin {
+    text-indent: -99999px;
+    display: inline-block;
+    width: 20px; 
+    height:20px;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size:20px 20px;
+    transition:.3s opacity,.3s background-image;
+    opacity:.6;
+    background-image:url(../images/linkedinoutline-creamred.svg);
+}
+    
+.contact-form .social a.linkedin:hover {
+    opacity:1;
+}
+
+.contact-form .social a.linkedin:hover {
+    background-image:url(../images/linkedinoutline-488red.svg)
+}
+
 form {
     font-size:2rem;
     width:100%;
+}
+
+input, textarea {
+    font-size: 1rem;
 }
 
 form input[type=email],
