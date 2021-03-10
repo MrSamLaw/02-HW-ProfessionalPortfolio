@@ -2,20 +2,133 @@
     --color-darkred:#1c1212;
     --color-288red:#bf1c26;
     --color-creamred:#f5b99f;
+    --color-creamredalpha:rgba(245,185,159,.6);
+    --color-288redalpha:rgba(191,28,38,.6);
 }
 
 * {
     /* border: 1px solid rgba(0,0,0,0.5); */
 }
 
+body {
+    background-color: var(--color-darkred);
+}
+
 /* Breakpoint guidelines */
-#wrapper {width:95%;  margin: 0 auto; }
+#wrapper {width:95%;  margin: 0 auto; } 
 
 #header {width:100%; }
 
 #content {width:100%; }
 
-#footer {width:100%; }
+#footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    height: 50px;
+    background-color: var(--color-creamred);
+    padding: 1rem 0;
+}
+
+.contact-form {
+    margin-top:12%;
+    color: var(--color-creamred);
+}
+
+.contact-form h3 {
+    padding:0;
+    margin:0 0 4rem;
+    line-height: 1.5rem;
+    font-size:2.5rem;
+    text-transform:uppercase;
+    background-color: var(--color-288redalpha);
+    color:var(--color-darkred);
+}
+
+.contact-form h6 {
+    padding:0;
+    margin:0;
+    font-size:1.4rem;
+    text-transform:uppercase;
+    margin:3rem 0 1.5rem
+}
+
+.contact-form .social a {
+    margin:0 0 0 4rem;
+    color:var(--color-288redalpha);
+}
+
+form {
+    font-size:2rem;
+    width:100%;
+}
+
+form input[type=email],
+form input[type=number],
+form input[type=password],
+form input[type=search],
+form input[type=tel],
+form input[type=text],
+form input[type=url],
+form textarea,
+form select {
+    appearance:none;
+    border:none;
+    border:3px solid var(--color-creamredalpha);
+    box-sizing:inherit;
+    padding:2rem 1.5rem;
+    width:100%;
+    color:rgba(255,255,255,.6);
+    outline:0;
+    background-color:transparent;
+    transition:.3s border;
+    border-radius:3px;
+}
+
+form input[type=email]:focus,
+form input[type=number]:focus,
+form input[type=password]:focus,
+form input[type=search]:focus,
+form input[type=tel]:focus,
+form input[type=text]:focus,
+form input[type=url]:focus,
+form textarea:focus,
+form select:focus {
+    border:3px solid var(--color-288redalpha);
+}
+
+form textarea {
+    height:200px;
+}
+
+form label {
+    display:block;
+    font-size:1.6rem;
+    /* cursor:pointer; */
+    padding:2.5rem 0 1.2rem;
+    color:var(--color-creamred);
+} 
+
+form label.required:after {
+    color:red;
+    content:' *';
+} 
+form button {
+    border:3px solid var(--color-creamredalpha);
+    background-color:transparent;
+    padding:1rem 1.5rem;
+    color:var(--color-creamred);
+    /* cursor:pointer; */
+    font-weight:700;
+    font-size:1.6rem;
+    border-radius:3px;
+    transition:.3s border,.3s color;
+    box-shadow:5px 5px var(--color-288redalpha);
+}
+
+form button:hover {
+    border:3px solid var(--color-creamredalpha);
+    color:var(--color-288red);
+}
 
 /* // Small devices (landscape phones, 576px and up) */
 
@@ -27,7 +140,7 @@
 
 #wrapper {width:90%; margin: 0 auto; }
 
-#footer {width:70%; }
+/* #footer {width:70%; } */
 
 /* // Large devices (desktops, 992px and up) */
 
@@ -42,3 +155,112 @@
 #wrapper {width:90%;  margin: 0 auto; }
 
 }
+
+
+/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+  .card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* make each code card a flexbox column to align and justify content within it */
+  .code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--heliotrope);
+  
+    /* outline is like border, but on the outside of the box instead of inside */
+    outline: 2px dashed var(--gin);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .code-card .card-header {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--outer-space);
+    color: var(--heliotrope);
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+  .code-card:hover,
+  .code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+  }
+  
+  /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+  .code-card .code-block {
+    flex-grow: 1;
+  }
+  
+  .code-card pre {
+    /* set styles to make it so code wraps in <pre> instead of overflowing */
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: var(--gin);
+    border-radius: 8px;
+    /* use linear-gradient() function to create a fading background  */
+    background-image: linear-gradient(
+      rgba(232, 102, 236, 0.3) 0%,
+      rgba(232, 102, 236, 0.6) 100%
+    );
+    display: flex;
+    align-items: center;
+  }
+  
+  /* on <pre> click, select all contents so the code is highlighted */
+  .code-card pre:active {
+    user-select: all;
+  }
+  
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+  @media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .card-column:last-child {
+      flex-grow: 1;
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
