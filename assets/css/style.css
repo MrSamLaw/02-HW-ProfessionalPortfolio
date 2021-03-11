@@ -1,9 +1,9 @@
 :root{
     --color-darkred:#1c1212;
     --color-288red:#bf1c26;
+    --color-288redalpha:rgba(191,28,38,.6);
     --color-creamred:#f5b99f;
     --color-creamredalpha:rgba(245,185,159,.6);
-    --color-288redalpha:rgba(191,28,38,.6);
 }
 
 * {
@@ -30,13 +30,13 @@ body {
 }
 
 .contact-form {
-    margin-top:12%;
+    margin-top:6%;
     color: var(--color-creamred);
 }
 
 .contact-form h3 {
     padding:0;
-    margin:0 0 4rem;
+    margin:1rem 0;
     line-height: 1.5rem;
     font-size:2.5rem;
     text-transform:uppercase;
@@ -49,7 +49,7 @@ body {
     margin:0;
     font-size:1.4rem;
     text-transform:uppercase;
-    margin:3rem 0 1.5rem
+    margin:2rem 0 1rem
 }
 
 .contact-form .social a {
@@ -123,6 +123,11 @@ body {
 form {
     font-size:2rem;
     width:100%;
+    color: var(--color-creamredalpha);
+}
+
+::placeholder {
+    color: var(--color-creamredalpha);
 }
 
 input, textarea {
@@ -144,7 +149,7 @@ form select {
     box-sizing:inherit;
     padding:2rem 1.5rem;
     width:100%;
-    color:rgba(255,255,255,.6);
+    color:var(--color-288red);
     outline:0;
     background-color:transparent;
     transition:.3s border;
