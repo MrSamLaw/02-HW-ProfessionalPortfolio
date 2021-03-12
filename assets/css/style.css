@@ -7,11 +7,12 @@
 }
 
 * {
-    /* border: 1px solid rgba(0,0,0,0.5); */
+    border: 1px solid rgba(0,0,0,0.5);
 }
 
 body {
     background-color: var(--color-darkred);
+    color: var(--color-creamred);
 }
 
 /* Breakpoint guidelines */
@@ -27,6 +28,7 @@ body {
     height: 50px;
     background-color: var(--color-creamred);
     padding: 1rem 0;
+    color: var(--color-darkred);
 }
 
 .contact-form {
@@ -34,7 +36,29 @@ body {
     color: var(--color-creamred);
 }
 
-.contact-form h3 {
+
+.about-me {
+    display:flex;
+}
+.about-me figure {
+    /* width:25%; */
+    flex: 1 1 33%;
+    margin: auto 1rem;
+}
+.about-me figure img {
+    width: 100%;
+}
+.about-me p {
+    flex: 2 1 67%;
+    margin-right: 1rem;
+}
+
+#profile-pic {
+    width:25%;
+}
+#portfolio h3,
+#contact-me h3,
+#about-me h3 {
     padding:0;
     margin:1rem 0;
     line-height: 1.5rem;
@@ -266,6 +290,10 @@ form button:hover {
     transition: all 0.5s ease-in-out;
   }
   
+  .about {
+      display:flex;
+      flex:1;
+  }
   .code-card .card-header {
     /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
     position: relative;

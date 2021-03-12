@@ -34,8 +34,8 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <header>
-                <h1>Portfolio</h1>
+            <header id="portfolio">
+                <h3>Portfolio</h3>
             </header>
             <section class="row justify-center">
                 <div class="card-column">
@@ -44,12 +44,6 @@
                         <div class="card-body">
                             <p>Use these three properties to create a Flexbox row layout.</p>
                         </div>
-                        <!-- with the <pre> element, it counts all spaces literally, so proper code indentation cannot be applied in this case -->
-                        <pre class="code-block"><code>.row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }</code></pre>
                     </figure>
                 </div>
                 <div class="card-column">
@@ -58,10 +52,6 @@
                         <div class="card-body">
                             <p>Use this to create a Flexbox column layout.</p>
                         </div>
-                        <pre class="code-block"><code>.column {
-      display: flex;
-      flex-direction: column
-    }</code></pre>
                     </figure>
                 </div>
 
@@ -71,11 +61,6 @@
                         <div class="card-body">
                             <p>Build a 12-column layout using CSS Grid</p>
                         </div>
-                        <pre class="code-block"><code>.grid {
-      display: grid;
-      width: 100%;
-      grid-template-columns: repeat(12, 1fr);
-    }</code></pre>
                     </figure>
                 </div>
                 <div class="card-column">
@@ -84,12 +69,6 @@
                         <div class="card-body">
                             <p>This will create a background linear gradient from top to bottom.</p>
                         </div>
-                        <pre class="code-block"><code>.linear-gradient-background {
-      background-image: linear-gradient(
-        rgba(232, 102, 236, 0.3) 0%,
-        rgba(232, 102, 236, 0.6) 100%
-      );
-    }</code></pre>
                     </figure>
                 </div>
                 <div class="card-column">
@@ -98,15 +77,6 @@
                         <div class="card-body">
                             <p>Use transition and box shadows to glow on hover.</p>
                         </div>
-                        <pre class="code-block"><code>.code-card .card-header {
-      border-radius: 8px;
-      transition: all 0.5s ease-in-out;
-    }
-    
-    .code-card:hover,
-    .code-card:hover .card-header {
-      box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
-    }</code></pre>
                     </figure>
                 </div>
 
@@ -118,19 +88,24 @@
                                 starting point.
                             </p>
                         </div>
-                        <pre class="code-block"><code>.card-header {
-      position: relative;
-      margin-top: -20px;
-    }</code></pre>
-                    </figure>
-                </div>
             </section>
-            <header>
-                <h1>About Me</h1>
+            <header id="about-me">
+                <h3>About Me</h3>
             </header>
-            <section class="row justify-center">
+            <section class="about-me">
+                <figure>
+                    <img src="assets/images/SamLawProfile.jpg" alt="">
+                </figure>
+                <p>This is text about Sam the Full Stack Developer. Having a great eye for detail and problem solving
+                    skills. I
+                    am keen to learn whatever I can, to help the world live with a better internet full of great code,
+                    that
+                    enhances user experience through great designs and implementation.
+                </p>
+            </section>
+            <!-- <section class="about">
                 <div class="card-column">
-                    <figure class="card code-card">
+                    <figure class="card code-card" id="profile-pic">
                         <img src="assets/images/SamLawProfile.jpg" alt="Portrait of Sam Law">
                     </figure>
                     <figure class="card code-card">
@@ -140,9 +115,13 @@
                         </div>
                     </figure>
                 </div>
-            </section>
-            <section class="row justify-center contact-form">
+            </section> -->
+
+            <header id="contact-me">
                 <h3>Contact Me</h3>
+            </header>
+            <section class="row justify-center contact-form">
+
                 <div class="card-column">
                     <figure class="card code-card">
                         <div class="card-body social">
