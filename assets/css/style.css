@@ -29,21 +29,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Breakpoint guidelines */
-#wrapper {width:95%;  margin: 0 auto; } 
+#wrapper {
+    width:95%;
+    margin: 0 auto; 
+} 
 
-#header {width:100%; 
-height: 100vh;
-flex: 1 1 100%}
+header {
+    padding-top: 53px;
+}
 
-#content {width:100%; }
+#header {
+    width:100%; 
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
 
-#footer {
-    margin-top: 1.5rem;
-    text-align: center;
-    height: 50px;
-    background-color: var(--color-creamred);
-    padding: 1rem 0;
-    color: var(--color-darkred);
+.flex {
+    display: flex;
 }
 
 .highlight {
@@ -51,17 +54,6 @@ flex: 1 1 100%}
     color: var(--color-darkred);
     text-shadow: 1px 1px 3px var(--color-creamred);
     text-transform: uppercase;
-}
-.flex {
-    display: flex;
-}
-
-#header {
-    align-items: center;
-    justify-content: center;
-}
-header {
-    padding-top: 53px;
 }
 
 .burger-menu {
@@ -110,9 +102,67 @@ input:checked ~ .menu-content {
     max-height: 100%;
 }
 
-.contact-form {
-    margin-top:6%;
-    color: var(--color-creamred);
+#portfolio h3,
+#about-me h3,
+#contact-me h3 {
+    padding: 0 3rem;
+    margin-top: 50px;
+    line-height: 1.5rem;
+    font-size:2.5rem;
+    background-color: var(--color-288redalpha);
+    color:var(--color-darkred);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.card-column {
+    flex: 1 0 100%;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.about {
+    display:flex;
+    flex:1;
+}
+
+.card .card-header {
+    display:flex;
+    width:fit-content;
+    place-items: center;
+    z-index:10;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio .card-column .card:hover {
+    transition: all 0.5s ease-in-out;
+    position:relative;
+    top:-2px;
+    left:-2px;
+    box-shadow: 5px 5px 2px var(--color-288redalpha);
+}
+
+.portfolio img {
+    width: 100%;
+    opacity: .3;
+    background-color: rgba(0,0,0,0.8);
 }
 
 .lang {
@@ -120,18 +170,12 @@ input:checked ~ .menu-content {
     display:inline-flex;
     background-color: var(--color-288redalpha);
     color:var(--color-darkred);
-    
 }
-.portfolio img {
-    width: 100%;
-    opacity: .3;
-    background-color: rgba(0,0,0,0.8);
-}
+
 .about-me {
     display:flex;
 }
 .about-me figure {
-    /* width:25%; */
     flex: 1 1 33%;
     margin: auto 1rem;
 }
@@ -147,19 +191,8 @@ input:checked ~ .menu-content {
 #profile-pic {
     width:25%;
 }
-#portfolio h3,
-#contact-me h3,
-#about-me h3 {
-    padding: 0 3rem;
-    margin-top: 50px;
-    line-height: 1.5rem;
-    font-size:2.5rem;
-    background-color: var(--color-288redalpha);
-    color:var(--color-darkred);
-    
-}
 
-.code-card {
+.card {
     position: relative;
 }
 .card-header {
@@ -170,6 +203,11 @@ input:checked ~ .menu-content {
     position:absolute;
     top:55%;
     text-align: center;
+}
+
+.contact-form {
+    margin-top:6%;
+    color: var(--color-creamred);
 }
 
 .contact-form h4 {
@@ -262,12 +300,7 @@ input, textarea {
 }
 
 form input[type=email],
-form input[type=number],
-form input[type=password],
-form input[type=search],
-form input[type=tel],
 form input[type=text],
-form input[type=url],
 form textarea,
 form select {
     appearance:none;
@@ -284,12 +317,7 @@ form select {
 }
 
 form input[type=email]:focus,
-form input[type=number]:focus,
-form input[type=password]:focus,
-form input[type=search]:focus,
-form input[type=tel]:focus,
 form input[type=text]:focus,
-form input[type=url]:focus,
 form textarea:focus,
 form select:focus {
     border:3px solid var(--color-288redalpha);
@@ -302,7 +330,6 @@ form textarea {
 form label {
     display:block;
     font-size:1rem;
-    /* cursor:pointer; */
     padding:2.5rem 0 1.2rem;
     color:var(--color-creamred);
 } 
@@ -316,7 +343,6 @@ form button {
     background-color:transparent;
     padding:1rem 1.5rem;
     color:var(--color-creamred);
-    /* cursor:pointer; */
     font-weight:700;
     font-size:1.4rem;
     border-radius:3px;
@@ -329,171 +355,107 @@ form button:hover {
     color:var(--color-288red);
 }
 
+#footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    height: 50px;
+    background-color: var(--color-creamred);
+    padding: 1rem 0;
+    color: var(--color-darkred);
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
 
 /* // Medium devices (tablets, 768px and up) */
 }
-@media (min-width: 768px) {
-    #wrapper {width:100%; margin: 0 auto; }
-#footer {width:100%; }
-.burger-menu {
-    position: sticky;
-    top:0;
-    width: 100%;
-    z-index:50;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-#header {
-    margin-bottom: 53px;
-}
-header {
-    margin-top: -53px;
-}
-#portfolio h3,
-#contact-me h3,
-#about-me h3 {
-    padding: 0 3rem;
-    margin-top: 5px;
-}
-.burger-menu label{
-    display:none;
-}
-.burger-menu input#open-menu {
-    display:none;
-}
-.menu-content {
-    display: flex;
-height: 100%;
-    text-align: center;
-}
-input:not(:checked) ~ .menu-content {
-    max-height: 100%;
-}
-
-.menu-content ul {
-    list-style: none; 
-margin: 0; 
-padding: 0; 
-display: flex; 
-align-items: center;
-}
-.menu-content li {
-    padding: 4px 2rem;
-    display: flex;
-}
-.menu-content a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color:var(--color-creamred);
-}
-.menu-content a:hover {
-    color: var(--color-darkred);
-}
-}
-/* // Large devices (desktops, 992px and up) */
-
-@media (min-width: 992px) { 
-
-}
-
-/* // Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
-
-#wrapper {width:100%;  margin: 0 auto; }
-
-}
-
-/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    /* margin-left: -1.5rem;
-    margin-right: -1.5rem; */
-  }
-  
-  .justify-center {
-    justify-content: center;
-  }
-  
-  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
-  .card-column {
-    flex: 1 0 100%;
-    /* padding: 1.5rem; */
-    /* when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* make each code card a flexbox column to align and justify content within it */
-  .code-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
-  }
-  
-  .about {
-      display:flex;
-      flex:1;
-  }
-  .code-card .card-header, {
-    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-    display:flex;
-    width:fit-content;
-    place-items: center;
-    zindex:10;
-    padding: 0.5rem 1rem;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
-  .portfolio .card-column .code-card:hover {
-    transition: all 0.5s ease-in-out;
-    position:relative;
-      top:-2px;
-      left:-2px;
-      box-shadow: 5px 5px 2px var(--color-288redalpha);
-      
-  }
-  
-  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-  @media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
-    .card-column {
-      flex: 0 0 50%;
-      max-width: 50%;
+@media screen and (min-width: 768px) {
+    #wrapper {
+        width:100%; 
+        margin: 0 auto; 
     }
 
+    header {
+        margin-top: -53px;
+    }
+
+    #header {
+        margin-bottom: 53px;
+    }
+    
+    #footer {
+        width:100%; 
+    }
+    
+    .burger-menu {
+        position: sticky;
+        top:0;
+        width: 100%;
+        z-index:50;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .burger-menu label{
+        display:none;
+    }
+    .burger-menu input#open-menu {
+        display:none;
+    }
+
+    .menu-content {
+        display: flex;
+        height: 100%;
+        text-align: center;
+    }
+
+    .menu-content ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-content li {
+        padding: 4px 2rem;
+        display: flex;
+    }
+
+    .menu-content a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color:var(--color-creamred);
+    }
+
+    .menu-content a:hover {
+        color: var(--color-darkred);
+    }
+    
+    input:not(:checked) ~ .menu-content {
+        max-height: 100%;
+    }
+    
+    #portfolio h3,
+    #contact-me h3,
+    #about-me h3 {
+        padding: 0 3rem;
+        margin-top: 5px;
+    }
+
+    .card-column {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
     .portfolio div:first-child {
         flex: 1 1 100%;
         max-width:100%;
     }
-    
-    /* select the last child to grow to full width if it has space to grow */
+      
     .card-column:last-child {
-      flex-grow: 1;
+        flex-grow: 1;
     }
-  }
-  
-  /* media query for larger screens */
-  @media screen and (min-width: 992px) {
-    /* header {
-      width: 75%;
-    } */
-  
-    .portfolio:first-child {
-        width:100%;
-    }
-    
-    /* .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
-    } */
-  }
+}
