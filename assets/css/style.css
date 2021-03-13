@@ -11,14 +11,19 @@
     /* border: 1px solid rgba(0,0,0,0.5); */
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 body {
     background-color: var(--color-darkred);
     color: var(--color-creamred);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', "Franklin Gothic Medium", Tahoma, sans-serif;
     text-transform: uppercase;
     letter-spacing:-0.1em;
 }
@@ -41,6 +46,12 @@ flex: 1 1 100%}
     color: var(--color-darkred);
 }
 
+.highlight {
+    font-family: 'Roboto', "Franklin Gothic Medium", Tahoma, sans-serif;
+    color: var(--color-darkred);
+    text-shadow: 1px 1px 3px var(--color-creamred);
+    text-transform: uppercase;
+}
 .flex {
     display: flex;
 }
@@ -95,9 +106,6 @@ header {
     color: var(--color-darkred);
 }
 /* Toggle Effect */
-input:checked ~ .burger-menu label {
-    background-image: url(../images/fork.svg);
-}
 input:checked ~ .menu-content {
     max-height: 100%;
 }
@@ -151,16 +159,28 @@ input:checked ~ .menu-content {
     
 }
 
-.contact-form h6 {
+.code-card {
+    position: relative;
+}
+.card-header {
+    position:absolute;
+    top:50%;
+}
+.card-body {
+    position:absolute;
+    top:55%;
+    text-align: center;
+}
+
+.contact-form h4 {
     padding:0;
     margin:0;
-    font-size:1.4rem;
     text-transform:uppercase;
     margin:2rem 0 1rem
 }
 
 .contact-form .social a {
-    margin:0 0 0 4rem;
+    margin:0 2rem;
     color:var(--color-288redalpha);
 }
 
@@ -281,7 +301,7 @@ form textarea {
 
 form label {
     display:block;
-    font-size:1.6rem;
+    font-size:1rem;
     /* cursor:pointer; */
     padding:2.5rem 0 1.2rem;
     color:var(--color-creamred);
@@ -298,7 +318,7 @@ form button {
     color:var(--color-creamred);
     /* cursor:pointer; */
     font-weight:700;
-    font-size:1.6rem;
+    font-size:1.4rem;
     border-radius:3px;
     transition:.3s border,.3s color;
     box-shadow:5px 5px var(--color-288redalpha);
@@ -327,7 +347,18 @@ form button:hover {
     align-items: center;
     justify-content: space-around;
 }
-
+#header {
+    margin-bottom: 53px;
+}
+header {
+    margin-top: -53px;
+}
+#portfolio h3,
+#contact-me h3,
+#about-me h3 {
+    padding: 0 3rem;
+    margin-top: 5px;
+}
 .burger-menu label{
     display:none;
 }
